@@ -10,7 +10,7 @@ const config = {
 }
 
 App({
-  onLaunch: () => {
+  onLaunch: function() {
     // 调用 API 从本地缓存中获取数据
     const logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

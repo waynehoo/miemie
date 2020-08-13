@@ -12,7 +12,7 @@ Page({
     vocListMax: 12346
   },
 
-  onLoad: () => {
+  onLoad: function(e) {
     //从本地缓存单词表选取第一个单词
     var idx = Math.floor(Math.random() * this.data.worldListMax) + 1
     var word = list.wordList[idx]
@@ -25,13 +25,13 @@ Page({
     })
   },
 
-  show: () => {
+  show: function(e){
     this.setData({
       showNot: true
     })
   },
 
-  next: () => {
+  next: function(e) {
     this.setData({
       showNot: false
     })
@@ -63,7 +63,7 @@ Page({
     })
   },
 
-  read: () => {
+  read: function() {
     if (this.data.audioUrl) {
       innerAudioContext.play()
     }
